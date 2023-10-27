@@ -32,7 +32,7 @@ import { Stakeholders } from "../../../models/migration/controls/stakeholders";
 let stakeholdersList: Array<Stakeholders> = [];
 let applicationsList: Array<Assessment> = [];
 
-describe(["@tier2"], "Application risks tests", () => {
+describe.skip(["@tier2"], "Bug MTA-1345: Application risks tests", () => {
     let riskType = ["low", "medium", "high"];
 
     before("Login and Create Test Data", function () {
@@ -52,7 +52,7 @@ describe(["@tier2"], "Application risks tests", () => {
         }
     });
 
-    it.skip("Bug MTA-1345: Application risk validation", function () {
+    it("Application risk validation", function () {
         // Navigate to reports page
         selectUserPerspective(migration);
         clickByText(navMenu, reports);
